@@ -1,0 +1,133 @@
+/* Filename - App.css */
+
+.App {
+  max-height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  background-color: #100909;
+  color:#f3ab32;
+  font-weight: bolder;
+}
+
+.main {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.left-container {
+  position: relative;
+  flex: 60%;
+  height: 100%; /* Use 100% as calc is redundant here */
+}
+
+.right-container {
+  flex: 40%;
+  height: 100%; /* Use 100% as calc is redundant here */
+  display: flex;
+  flex-direction: column;
+  background-color: #0f0e0e; 
+  border-left: 3px solid #0a0b0b;
+  padding: 5px;
+}
+
+.input-box,
+.spinner-box,
+.output-box {
+  flex: 40%;
+  padding: 5px; /* Add padding to all input/output boxes */
+}
+
+.input-box textarea {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background-color: #242424;
+  color: #f3ab32;
+  padding: 5px;
+  border: none; /* Remove default textarea border */
+}
+
+.input-box textarea:focus {
+  outline: none;
+}
+
+.spinner-box {
+  background-color: #ffffff;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-box img {
+  width: 200px;
+}
+
+.output-box {
+  background-color: #242424; 
+  overflow-y: auto;
+  color: #f3ab32;
+  position: relative;
+}
+
+.clear-btn,
+.run-btn {
+  position: absolute;
+  bottom: 10px; 
+  right: 18px;
+  width: 80px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background-color: #663399;
+}
+
+.run-btn {
+  background-color: #663399;
+}
+
+.run-btn:active {
+  background-color: #3431e3;
+}
+
+.output-box pre {
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+
+h4 {
+  color: #ffffff;
+}
+
+
+#code-inp:focus {
+  outline: none;
+}
+
+.run-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 18px;
+  width: 80px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color:#663399 ;/*Run button */
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.run-btn:active {
+  background-color: #3431e3;
+}
