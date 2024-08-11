@@ -1,10 +1,12 @@
-/* Filename - App.css*/
+/* Filename - App.css */
 
 .App {
   max-height: 100vh;
   width: 100%;
   overflow-y: hidden;
-  background-color: #474747;
+  background-color: #100909;
+  color:#f3ab32;
+  font-weight: bolder;
 }
 
 .main {
@@ -15,30 +17,43 @@
 .left-container {
   position: relative;
   flex: 60%;
-  height: calc(100vh - 50px);
+  height: 100%; /* Use 100% as calc is redundant here */
 }
 
 .right-container {
   flex: 40%;
-  height: calc(100vh - 50px);
+  height: 100%; /* Use 100% as calc is redundant here */
   display: flex;
   flex-direction: column;
-  background-color: #242424;
-  border-left: 3px solid #1f65e6;
+  background-color: #0f0e0e; 
+  border-left: 3px solid #0a0b0b;
   padding: 5px;
 }
 
-.input-box {
-  flex: 50%;
+.input-box,
+.spinner-box,
+.output-box {
+  flex: 40%;
+  padding: 5px; /* Add padding to all input/output boxes */
 }
 
 .input-box textarea {
   font-size: 16px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background-color: #242424;
+  color: #f3ab32;
+  padding: 5px;
+  border: none; /* Remove default textarea border */
+}
+
+.input-box textarea:focus {
+  outline: none;
 }
 
 .spinner-box {
-  flex: 50%;
-  background-color: #242424;
+  background-color: #ffffff;
   overflow-y: auto;
   display: flex;
   justify-content: center;
@@ -50,27 +65,38 @@
 }
 
 .output-box {
-  flex: 50%;
-  background-color: #242424;
+  background-color: #242424; 
   overflow-y: auto;
-  color: white;
+  color: #f3ab32;
   position: relative;
 }
 
-.clear-btn {
+.clear-btn,
+.run-btn {
   position: absolute;
-  bottom: 14px;
+  bottom: 10px; 
   right: 18px;
   width: 80px;
   height: 40px;
   font-size: 22px;
   font-weight: bold;
   color: white;
-  background-color: #1f65e6;
   border: none;
   border-radius: 4px;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.clear-btn {
+  background-color: #663399;
+}
+
+.run-btn {
+  background-color: #663399;
+}
+
+.run-btn:active {
+  background-color: #3431e3;
 }
 
 .output-box pre {
@@ -79,18 +105,9 @@
 }
 
 h4 {
-  color: #e09020;
+  color: #ffffff;
 }
 
-#code-inp {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  resize: none;
-  background-color: #242424;
-  color: whitesmoke;
-  padding: 5px;
-}
 
 #code-inp:focus {
   outline: none;
@@ -104,7 +121,7 @@ h4 {
   height: 40px;
   font-size: 22px;
   font-weight: bold;
-  background-color: #4f2392;
+  background-color:#663399 ;/*Run button */
   border: none;
   border-radius: 4px;
   transition: 0.3s;
@@ -112,5 +129,5 @@ h4 {
 }
 
 .run-btn:active {
-  background-color: #282778;
+  background-color: #3431e3;
 }

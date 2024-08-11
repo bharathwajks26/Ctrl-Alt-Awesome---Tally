@@ -15,7 +15,7 @@ function App() {
     const [userLang, setUserLang] = useState("python");
 
     // State variable to set editors default theme
-    const [userTheme, setUserTheme] = useState("vs-dark");
+    const [userTheme, setUserTheme] = useState("hc-black");
 
     // State variable to set editors default font size
     const [fontSize, setFontSize] = useState(20);
@@ -26,9 +26,11 @@ function App() {
     // State variable to set users output
     const [userOutput, setUserOutput] = useState("");
 
-    // Loading state variable to show spinner
-    // while fetching data
+    // Loading state variable to show spinner while fetching data
     const [loading, setLoading] = useState(false);
+
+    // State variable to store the compilation time
+    const [compilationTime, setCompilationTime] = useState(null);
 
     const options = {
         fontSize: fontSize
@@ -38,8 +40,11 @@ function App() {
     function compile() {
         setLoading(true);
         if (userCode === ``) {
-            return
+            setLoading(false);
+            return;
         }
+
+        const start = performance.now(); // Start the timer
 
         // Post request to compile endpoint
         Axios.post(`http://localhost:8000/compile`, {
@@ -48,11 +53,12 @@ function App() {
             input: userInput
         }).then((res) => {
             setUserOutput(res.data.stdout || res.data.stderr);
-        }).then(() => {
-            setLoading(false);
+            const end = performance.now(); // End the timer
+            setCompilationTime((end - start).toFixed(2)); // Set compilation time in milliseconds
         }).catch((err) => {
             console.error(err);
             setUserOutput("Error: " + (err.response ? err.response.data.error : err.message));
+        }).finally(() => {
             setLoading(false);
         });
     }
@@ -60,6 +66,7 @@ function App() {
     // Function to clear the output screen
     function clearOutput() {
         setUserOutput("");
+        setCompilationTime(null); // Clear the compilation time
     }
 
     return (
@@ -81,7 +88,7 @@ function App() {
                         defaultValue="# Enter your code here"
                         onChange={(value) => { setUserCode(value) }}
                     />
-                    <button className="run-btn" onClick={() => compile()}>
+                    <button className="run-btn" onClick={compile}>
                         Run
                     </button>
                 </div>
@@ -100,10 +107,14 @@ function App() {
                     ) : (
                         <div className="output-box">
                             <pre>{userOutput}</pre>
-                            <button onClick={() => { clearOutput() }}
-                                className="clear-btn">
+                            <button onClick={clearOutput} className="clear-btn">
                                 Clear
                             </button>
+                        </div>
+                    )}
+                    {compilationTime && (
+                        <div className="compilation-time">
+                            <p>Time taken to compile: {compilationTime} ms</p>
                         </div>
                     )}
                 </div>

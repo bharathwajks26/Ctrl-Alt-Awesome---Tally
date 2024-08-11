@@ -1,14 +1,17 @@
 /* Filename: Navbar.css */
 
-.navbar {
+.Navbar {
     display: flex;
     align-items: center;
     padding-left: 20px;
     height: 50px;
     text-align: center;
-    color: #5f3fec;
-    background-color: #474747;
-    gap: 20px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #9370DB;
+    background-color: black;
+    gap: 20px;   
 }
 
 #no {
@@ -16,9 +19,9 @@
     width: 80px;
     font-size: 16px;
     color: rgb(185, 185, 185);
-    border: 1px solid #e6cfb0;
+    border: 1px solid #242424;
     border-radius: 4px;
-    background-color: #474747;
+    background-color: #e91d1d;
 }
 
 #no:focus {
@@ -27,11 +30,11 @@
 
 .css-2b097c-container {
     width: 120px;
-    color: black;
-    background-color: #474747;
+    color: rgb(5, 121, 153);
+    background-color: #e21313;
 }
 
 .css-yk16xz-control {
-    background-color: #474747 !important;
-    border-color: #f4081c !important;
+    background-color: #eca012 !important;
+    border-color: #d9bb10 !important;
 }
