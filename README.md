@@ -70,12 +70,14 @@ These resources were instrumental in shaping the development of this project, of
 
 ### Output
 
-- _Dark Mode_
-  
-    ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/blob/main/outcomp/2.jpg)
-
 - _Light Mode_
   
-  ![Screenshot1](https://github.com/optimisticace2003/BreakingBug-ML/blob/main/output/1.jpg)
+    ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/blob/main/outcomp/1.jpg)
+  
+
+- _Dark Mode_
+  
+  
+  ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/blob/main/outcomp/2.jpg)
  
 
