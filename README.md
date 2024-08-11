@@ -1,9 +1,6 @@
 # Ctrl-Alt-Awesome---Tally
 Online coding compiler project by SIMATS students - Ctrl Alt Awesome team
 
-Here’s a polished version of your summary for the GitHub README file:
-
----
 
 # Code Editor and Compiler
 
@@ -28,7 +25,3 @@ This project was inspired and guided by the following resources:
 - **[Code Editor Tutorial on YouTube](https://www.youtube.com/watch?v=k49ZR3hRMzA)**: A step-by-step video tutorial demonstrating the creation of a code editor with React.js, including practical examples and coding demonstrations.
 
 These resources were instrumental in shaping the development of this project, offering both theoretical insights and practical implementation techniques.
-
----
-
-This version is structured to be informative and visually appealing, perfect for a GitHub README file.
