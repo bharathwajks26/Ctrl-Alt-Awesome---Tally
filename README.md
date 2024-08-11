@@ -32,6 +32,12 @@ These resources were instrumental in shaping the development of this project, of
 
 ### Output
 
-- Drak Mode
-    ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/outcomp/1)
+- _Dark Mode_
+  
+    ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/blob/main/outcomp/1.jpg)
+
+- _Light Mode_
+  
+  ![Screenshot1](https://github.com/optimisticace2003/BreakingBug-ML/blob/main/output/2.png)
+ 
 
