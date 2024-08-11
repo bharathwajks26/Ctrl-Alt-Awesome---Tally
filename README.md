@@ -29,3 +29,9 @@ This project was inspired and guided by the following resources:
 - *[Code Editor Tutorial on YouTube](https://www.youtube.com/watch?v=k49ZR3hRMzA)*: A step-by-step video tutorial demonstrating the creation of a code editor with React.js, including practical examples and coding demonstrations.
 
 These resources were instrumental in shaping the development of this project, offering both theoretical insights and practical implementation techniques.
+
+### Output
+
+- Drak Mode
+    ![Screenshot1](https://github.com/bharathwajks26/Ctrl-Alt-Awesome---Tally/outcomp/1)
+
